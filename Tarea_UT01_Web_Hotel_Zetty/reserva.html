@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Reservas</title>
+</head>
+<body>
+    <!--Una cabecera H1 “Haga su reserva”. -->
+    <h1>Ha su reserva</h1>
+    <!--Un formulario con los siguientes campos-->
+    <form action="/procesareserva.php" method="get">
+        <fieldset>
+            <legend>Datos Personales</legend>
+        <!--Un input para introducir el nombre y otro para los apellidos. Los dos requeridos
+         y con una longitud máxima de 100 caracteres.  El nombre con autofocus-->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" autofocus><br><br>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" maxlength="100" required><br><br>
+        <!--Un input de longitud máxima 10 caracteres para introducir el DNI. Es requerido y 
+        tiene un placeholder que pone “DNI con letra”-->
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" maxlength="10" placeholder="DNI con letra" required><br><br>
+        </fieldset>
+        <!--Tres botones de radio con los valores Individual, Doble y Triple. El nombre del campo al que se 
+        asignan será “Habitación”-->
+        <label for="habitacion">Habitación:</label>
+            <input type="radio" id="habitacion" name="habitacion" value="individual" checked>Individual
+            <input type="radio" id="habitacion" name="habitacion" value="doble" >Doble
+            <input type="radio" id="habitacion" name="habitacion" value="triple" >Triple<br><br>
+        <!--Una lista desplegables ( Número de personas ) con los valores: 1,2 y 3 -->
+        <label for="num_personas">Número de personas:</label>
+        <select id="num_personas" name="num_personas">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br><br>
+        <!--Un “Checkbox” con el texto, “Llevo mascotas”-->
+        <label for="llevo_mascotas">Llevo mascotas:</label>
+        <input type="checkbox" name="llevo_mascotas" name="llevo_mascotas"><br><br>
+        <!--Un input de tipo “date” con el texto fecha de llegada.-->
+        <label for="fecha_llegada">Fecha de llegada:</label>
+        <input type="date" name="fecha_llegada"><br><br>
+        <!--Un input de tipo “time”  con el texto “Hora de llegada”-->
+        <label for="hora_llegada">Hora de llegada:</label>
+        <input type="time" name="hora_llegada"><br><br>
+        <!--Agrupa los campos nombre, apellidos y dni en un fieldset con la leyenda “Datos Personales” y 
+        el resto de campos en un fieldset con la leyenda “Datos de su estancia”-->
+        <!--Un botón de enviar y otro de reiniciar-->
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reiniciar">
+        <!--Un enlace que ponga “Volver” y que lleve la página principal index.html-->
+        <p>
+            <a href="index.html">Volver</a>
+       </form>
+</body>
+</html>
